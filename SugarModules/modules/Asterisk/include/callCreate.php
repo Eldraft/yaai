@@ -48,7 +48,8 @@ chdir("../");
 chdir("../");
 
 require_once('include/entryPoint.php');
-require_once ('log4php/LoggerManager.php');
+// ДГ Этот манагер больше не поддерживается в Сюит
+//require_once ('log4php/LoggerManager.php');
 
 $GLOBALS['log'] = LoggerManager::getLogger('SugarCRM');
 

@@ -207,12 +207,12 @@ while( !$successfullyLoggedInThroughSoap ) {
         logLine("  Retrying in 5 seconds...\n\n");
         sleep(5);
     }
-    // This case might be obsolete at this point...
-    else if( empty($userGUID) || empty($soapSessionId) || $userGUID == -1 ) {
-        logLine( "  __FATAL: SOAP login failed, something didn't get set by login... check your site_url, and make sure sugarcrm is running.  SessionID:" . $soapSessionId . " user=" . $auth_array['user_auth']['user_name'] . " GUID=" . $userGUID . "__\n");
-        logLine( "  Sleeping for 5 seconds then retrying...\n\n");
-        sleep(5);
-    }
+    // ДГ Этот блок устарел...
+    // else if( empty($userGUID) || empty($soapSessionId) || $userGUID == -1 ) {
+    //     logLine( "  __FATAL: SOAP login failed, something didn't get set by login... check your site_url, and make sure sugarcrm is running.  SessionID:" . $soapSessionId . " user=" . $auth_array['user_auth']['user_name'] . " GUID=" . $userGUID . "__\n");
+    //     logLine( "  Sleeping for 5 seconds then retrying...\n\n");
+    //     sleep(5);
+    // }
     else {
         logLine( "  Successfully logged into Sugar via SOAP!  SessionId=" . $soapSessionId . " user=" . $auth_array['user_auth']['user_name'] . " GUID=" . $userGUID . "\n");
         $successfullyLoggedInThroughSoap = true;
